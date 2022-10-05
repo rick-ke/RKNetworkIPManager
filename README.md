@@ -1,2 +1,5 @@
 # RKNetworkIPManager
-Get Network IP Adress
+Get Network IP Address
+
+> ### How to use in class?
+> RKNetworkIPManager.shared.loadAddressIP()
