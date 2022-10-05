@@ -13,6 +13,14 @@
 		1D8AC29228ED1BDC00A5135F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8AC29028ED1BDC00A5135F /* Main.storyboard */; };
 		1D8AC29428ED1BDE00A5135F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8AC29328ED1BDE00A5135F /* Assets.xcassets */; };
 		1D8AC29728ED1BDE00A5135F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8AC29528ED1BDE00A5135F /* LaunchScreen.storyboard */; };
+		1D8AC2A528ED1D3100A5135F /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8AC29F28ED1D3100A5135F /* Optional+Extension.swift */; };
+		1D8AC2A628ED1D3100A5135F /* RKNetworkIPUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8AC2A028ED1D3100A5135F /* RKNetworkIPUntil.swift */; };
+		1D8AC2A728ED1D3100A5135F /* RKNetworkIPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8AC2A128ED1D3100A5135F /* RKNetworkIPManager.swift */; };
+		1D8AC2A828ED1D3100A5135F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8AC2A228ED1D3100A5135F /* String+Extension.swift */; };
+		1D8AC2A928ED1D3100A5135F /* Prints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8AC2A328ED1D3100A5135F /* Prints.swift */; };
+		1D8AC2AA28ED1D3100A5135F /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8AC2A428ED1D3100A5135F /* NotificationName+Extension.swift */; };
+		1D8AC2AE28ED1F5300A5135F /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8AC2AD28ED1F5300A5135F /* NetworkReachabilityManager.swift */; };
+		1D8AC2B028ED204100A5135F /* Protector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8AC2AF28ED204100A5135F /* Protector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		1D8AC29328ED1BDE00A5135F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D8AC29628ED1BDE00A5135F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D8AC29828ED1BDE00A5135F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D8AC29F28ED1D3100A5135F /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
+		1D8AC2A028ED1D3100A5135F /* RKNetworkIPUntil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKNetworkIPUntil.swift; sourceTree = "<group>"; };
+		1D8AC2A128ED1D3100A5135F /* RKNetworkIPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKNetworkIPManager.swift; sourceTree = "<group>"; };
+		1D8AC2A228ED1D3100A5135F /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		1D8AC2A328ED1D3100A5135F /* Prints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prints.swift; sourceTree = "<group>"; };
+		1D8AC2A428ED1D3100A5135F /* NotificationName+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
+		1D8AC2AD28ED1F5300A5135F /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		1D8AC2AF28ED204100A5135F /* Protector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 		1D8AC28928ED1BDC00A5135F /* RKNetworkIPManager */ = {
 			isa = PBXGroup;
 			children = (
+				1D8AC29E28ED1D3100A5135F /* Sources */,
 				1D8AC28A28ED1BDC00A5135F /* AppDelegate.swift */,
 				1D8AC28C28ED1BDC00A5135F /* SceneDelegate.swift */,
 				1D8AC28E28ED1BDC00A5135F /* ViewController.swift */,
@@ -65,6 +82,37 @@
 				1D8AC29828ED1BDE00A5135F /* Info.plist */,
 			);
 			path = RKNetworkIPManager;
+			sourceTree = "<group>";
+		};
+		1D8AC29E28ED1D3100A5135F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1D8AC2A128ED1D3100A5135F /* RKNetworkIPManager.swift */,
+				1D8AC2A028ED1D3100A5135F /* RKNetworkIPUntil.swift */,
+				1D8AC2AB28ED1D7300A5135F /* Extension */,
+				1D8AC2AC28ED1F3D00A5135F /* Tool */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1D8AC2AB28ED1D7300A5135F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1D8AC2A428ED1D3100A5135F /* NotificationName+Extension.swift */,
+				1D8AC29F28ED1D3100A5135F /* Optional+Extension.swift */,
+				1D8AC2A328ED1D3100A5135F /* Prints.swift */,
+				1D8AC2A228ED1D3100A5135F /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1D8AC2AC28ED1F3D00A5135F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				1D8AC2AD28ED1F5300A5135F /* NetworkReachabilityManager.swift */,
+				1D8AC2AF28ED204100A5135F /* Protector.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +186,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8AC2AE28ED1F5300A5135F /* NetworkReachabilityManager.swift in Sources */,
 				1D8AC28F28ED1BDC00A5135F /* ViewController.swift in Sources */,
+				1D8AC2A828ED1D3100A5135F /* String+Extension.swift in Sources */,
+				1D8AC2A528ED1D3100A5135F /* Optional+Extension.swift in Sources */,
+				1D8AC2A628ED1D3100A5135F /* RKNetworkIPUntil.swift in Sources */,
 				1D8AC28B28ED1BDC00A5135F /* AppDelegate.swift in Sources */,
+				1D8AC2B028ED204100A5135F /* Protector.swift in Sources */,
+				1D8AC2AA28ED1D3100A5135F /* NotificationName+Extension.swift in Sources */,
 				1D8AC28D28ED1BDC00A5135F /* SceneDelegate.swift in Sources */,
+				1D8AC2A728ED1D3100A5135F /* RKNetworkIPManager.swift in Sources */,
+				1D8AC2A928ED1D3100A5135F /* Prints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
