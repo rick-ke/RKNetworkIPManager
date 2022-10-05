@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     }
     
     func getIP() {
-        let ipAdress = RKNetworkIPManager.shared.loadAdressIP()
-        ipLabel.text = ipAdress
+        let ipAddress = RKNetworkIPManager.shared.loadAddressIP()
+        ipLabel.text = ipAddress
     }
 }
 

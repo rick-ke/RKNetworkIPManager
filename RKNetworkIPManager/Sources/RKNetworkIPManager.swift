@@ -7,14 +7,14 @@
 import Combine
 import Foundation
 
-/// 用法直接取 RKNetworkIPManager.shared.loadAdressIP()
+/// 用法直接取 RKNetworkIPManager.shared.loadAddressIP()
 /// 會等待有值才繼續執行
 /// NetworkReachabilityManager 依據 Alamofire
 /// 如果有導入 Alamofire 就免用該檔案
 class RKNetworkIPManager: NSObject {
     static let shared = RKNetworkIPManager()
     
-    private var adressIP: String?
+    private var addressIP: String?
     private let ipUntil = RKNetworkIPUntil()
     private var cancellables: Set<AnyCancellable> = []
     
@@ -33,7 +33,7 @@ class RKNetworkIPManager: NSObject {
         NetworkReachabilityManager()?
             .startListening(onQueue: .global(), onUpdatePerforming: { _ in
                 print(info: "[IP] 網路狀態改變")
-                self.adressIP = nil
+                self.addressIP = nil
             })
     }
     
@@ -42,7 +42,7 @@ class RKNetworkIPManager: NSObject {
             .publisher(for: .appWillEnterForeground)
             .sink { _ in
                 print(info: "[IP] App背景回到前景")
-                self.adressIP = nil
+                self.addressIP = nil
             }
             .store(in: &cancellables)
     }
@@ -51,19 +51,19 @@ class RKNetworkIPManager: NSObject {
         cancellables.removeAll()
     }
 
-    func reloadAdressIP() {
+    func reloadAddressIP() {
         let isReachable = NetworkReachabilityManager()?.isReachable ?? false
         if isReachable {
             print(info: "[IP] 刷新IP位置")
             Task {
-                adressIP = await ipUntil.loadFastestIP()
+                addressIP = await ipUntil.loadFastestIP()
             }
         }
     }
     
-    func loadAdressIP() -> String {
-        if let adressIP = adressIP {
-            return adressIP
+    func loadAddressIP() -> String {
+        if let addressIP = addressIP {
+            return addressIP
         }
         
         var ip = ""
@@ -72,10 +72,10 @@ class RKNetworkIPManager: NSObject {
             switch result {
             case .success(let resIP):
                 ip = resIP
-                self?.adressIP = resIP
+                self?.addressIP = resIP
             case .failure:
                 ip = "0.0.0.0"
-                self?.adressIP = nil
+                self?.addressIP = nil
             }
             semaphore.signal()
         }
